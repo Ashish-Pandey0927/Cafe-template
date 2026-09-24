@@ -101,32 +101,40 @@ function MenuCard({
                 </div>
 
                 {/* Learn more */}
-                <span className="absolute bottom-[18px] right-[50px] font-ui text-[24px] tracking-[-0.03em] transition-transform duration-300 group-hover:-translate-x-1">
+                <span className="absolute bottom-[22px] right-[90px] font-ui text-[22px] tracking-[-0.03em] transition-transform duration-300 group-hover:-translate-x-1">
                     Learn more
                 </span>
             </div>
 
-            {/* Concave corner cutout */}
-            <div
-                className="pointer-events-none absolute bottom-0 right-0 z-20 h-[82px] w-[82px]"
-                style={{
-                    backgroundColor: item.bg,
-                    borderTopLeftRadius: "100%",
-                }}
-            />
-
             {/* Background-colored socket behind arrow */}
             <div
-                className="pointer-events-none absolute bottom-0 right-0 z-[21] h-[76px] w-[76px] rounded-tl-full"
-                style={{
-                    backgroundColor: "#F4EEE0",
-                }}
+                className="pointer-events-none absolute bottom-0 right-0 z-20 h-[76px] w-[76px] rounded-tl-full bg-[#F4EEE0]"
             />
 
             {/* Floating Arrow */}
-            <span className="absolute bottom-0 right-0 z-30 flex h-[62px] w-[62px] translate-x-[1px] translate-y-[1px] items-center justify-center rounded-full bg-black text-[27px] font-light text-white transition-transform duration-300 group-hover:translate-x-2">
+            <span className="absolute bottom-0 right-0 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1712] text-2xl text-[#F4EEE0] transition-transform duration-300 group-hover:translate-x-1">
                 →
             </span>
+
+            {/* Corner notch above arrow socket */}
+            <span
+                className="pointer-events-none absolute bottom-[71px] right-0 z-20 h-[28px] w-[28px] bg-[#f4eee0]"
+                style={{
+                    mask: "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                    WebkitMask:
+                        "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                }}
+            ></span>
+
+            {/* Corner notch left of arrow socket */}
+            <span
+                className="pointer-events-none absolute bottom-[0px] right-[71px] z-20 h-[28px] w-[28px] bg-[#f4eee0]"
+                style={{
+                    mask: "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                    WebkitMask:
+                        "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                }}
+            ></span>
         </a>
     );
 }

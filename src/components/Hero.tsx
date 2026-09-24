@@ -122,7 +122,7 @@ export default function Hero() {
           width: 76px;
           height: 76px;
           right: 0;
-          bottom: 0;
+          bottom: 0px;
           background: #F4EEE0;
           border-top-left-radius: 100%;
           z-index: 5;
@@ -204,7 +204,7 @@ export default function Hero() {
                             <img
                                 src="/hero-2.jpg"
                                 alt=""
-                                className="absolute inset-0 h-[125%] w-full object-cover will-change-transform"
+                                className="absolute inset-0 h-[125%] scale-[1.4] w-full object-cover will-change-transform"
                                 style={{
                                     transform: `translate3d(0, ${parallaxY}px, 0)`,
                                 }}
@@ -222,9 +222,26 @@ export default function Hero() {
                         </p>
 
                         {/* Arrow sitting inside the concave corner */}
-                        <span className="organic-arrow flex h-16 w-16 items-center justify-center rounded-full bg-[#1B1712] text-2xl text-[#F4EEE0] transition-transform duration-300 group-hover:translate-x-1">
+
+                        <span className="organic-arrow flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1712] text-2xl text-[#F4EEE0] transition-transform duration-300 group-hover:translate-x-1">
                             →
                         </span>
+                        <span
+                            className="absolute bottom-[71px] right-0 z-20 h-[28px] w-[28px] bg-[#f4eee0]"
+                            style={{
+                                mask: "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                                WebkitMask:
+                                    "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                            }}
+                        ></span>
+                        <span
+                            className="absolute bottom-[0px] right-[71px] z-20 h-[28px] w-[28px] bg-[#f4eee0]"
+                            style={{
+                                mask: "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                                WebkitMask:
+                                    "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                            }}
+                        ></span>
                     </a>
 
 
@@ -251,9 +268,25 @@ export default function Hero() {
                         </p>
 
                         {/* Arrow sitting inside the concave corner */}
-                        <span className="organic-arrow flex h-16 w-16 items-center justify-center rounded-full bg-[#1B1712] text-2xl text-[#F4EEE0] transition-transform duration-300 group-hover:translate-x-1">
+                        <span className="organic-arrow flex h-12 w-12 items-center justify-center rounded-full bg-[#1B1712] text-2xl text-[#F4EEE0] transition-transform duration-300 group-hover:translate-x-1">
                             →
                         </span>
+                        <span
+                            className="absolute bottom-[71px] right-0 z-20 h-[28px] w-[28px] bg-[#f4eee0]"
+                            style={{
+                                mask: "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                                WebkitMask:
+                                    "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                            }}
+                        ></span>
+                        <span
+                            className="absolute bottom-[0px] right-[71px] z-20 h-[28px] w-[28px] bg-[#f4eee0]"
+                            style={{
+                                mask: "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                                WebkitMask:
+                                    "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
+                            }}
+                        ></span>
                     </a>
 
                 </div>
