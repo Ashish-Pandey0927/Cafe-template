@@ -13,7 +13,6 @@
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
     /* Path alias */
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
