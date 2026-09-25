@@ -268,7 +268,7 @@ export default function RestaurantMenu() {
                             What's on the table
                         </span>
 
-                        <h2 className="mt-3 max-w-[700px] font-display text-[56px] leading-[0.95] tracking-[-0.045em] text-[#1B1712] sm:text-[72px]">
+                        <h2 className="mt-3 max-w-[700px] font-display text-[42px] leading-[0.95] tracking-[-0.045em] text-[#1B1712] sm:text-[56px] lg:text-[72px]">
                             A menu built
                             <br />
                             around fire.

@@ -99,7 +99,7 @@ export default function About() {
                     <div className="flex flex-col justify-between lg:col-span-6 xl:col-span-7">
                         <div className="space-y-8">
                             <h2
-                                className={`about-fade-up font-display text-[42px] leading-[1.05] tracking-[-0.03em] text-[#1B1712] sm:text-[56px] xl:text-[64px] ${isVisible ? "in-view" : ""}`}
+                                className={`about-fade-up font-display text-[36px] leading-[1.05] tracking-[-0.03em] text-[#1B1712] sm:text-[46px] lg:text-[56px] xl:text-[64px] ${isVisible ? "in-view" : ""}`}
                                 style={{ transitionDelay: "100ms" }}
                             >
                                 Craft, coals, &amp; conversation.
@@ -203,7 +203,7 @@ export default function About() {
 
                             {/* Corner notch accent on bottom-right matching site organic cards */}
                             <span
-                                className="pointer-events-none absolute bottom-[71px] right-0 z-20 h-[28px] w-[28px] bg-[#F4EEE0]"
+                                className="hidden sm:block pointer-events-none absolute bottom-[71px] right-0 z-20 h-[28px] w-[28px] bg-[#F4EEE0]"
                                 style={{
                                     mask: "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
                                     WebkitMask:
@@ -211,7 +211,7 @@ export default function About() {
                                 }}
                             />
                             <span
-                                className="pointer-events-none absolute bottom-[0px] right-[71px] z-20 h-[28px] w-[28px] bg-[#F4EEE0]"
+                                className="hidden sm:block pointer-events-none absolute bottom-[0px] right-[71px] z-20 h-[28px] w-[28px] bg-[#F4EEE0]"
                                 style={{
                                     mask: "radial-gradient(circle at top left, transparent 0 27px, black 28px)",
                                     WebkitMask:

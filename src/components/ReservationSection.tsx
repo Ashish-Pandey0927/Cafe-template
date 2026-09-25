@@ -334,27 +334,18 @@ export default function ReservationSection() {
             ================================================================= */}
 
             <ImageRippleEffect
-                images={[
-                    {
-                        src: "/cta-img.jpg",
-                        x: 0,
-                        y: 0,
-                        widthScale: 1,
-                        heightScale: 1,
-                    },
-                ]}
-                distortionStrength={0.12}
-                waveCount={100}
-                waveSize={70}
-                waveRotationSpeed={0.025}
-                waveFadeMultiplier={0.95}
-                waveGrowth={0.17}
-                waveSpawnThreshold={1}
+                images={[{ src: "/cta-img.jpg" }]}
+                distortionStrength={0.5}
+                waveCount={50}
+                waveSize={140}
+                waveFadeMultiplier={0.975}
+                waveGrowth={5}
+                waveSpawnThreshold={5}
                 className="
                     !absolute
                     !inset-0
-                    !h-auto
-                    !w-auto
+                    !h-full
+                    !w-full
                     z-0
                 "
             />

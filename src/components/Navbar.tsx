@@ -196,7 +196,7 @@ export default function Navbar() {
 
                 {/* ---- 2. Nav pill — translucent capsule ---- */}
                 <nav
-                    className={`hidden w-[800px] items-center justify-between gap-6 mt-[10px] rounded-full px-6 py-2 font-ui backdrop-blur-xl transition-all duration-500 ease-out md:flex ${scrolled
+                    className={`hidden w-full max-w-[800px] items-center justify-between gap-6 mt-[10px] rounded-full px-6 py-2 font-ui backdrop-blur-xl transition-all duration-500 ease-out md:flex ${scrolled
                         ? "bg-[#F4EEE0]/95 shadow-[0_10px_30px_rgba(27,23,18,0.15)]"
                         : "bg-[#F4EEE0]/30 shadow-none"
                         }`}

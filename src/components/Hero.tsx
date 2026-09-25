@@ -319,7 +319,7 @@ export default function Hero() {
 
                     {/* Headline card — flush against the image's own left/bottom edges */}
                     <div
-                        className="absolute bottom-0 left-0 w-[88%] max-w-xl bg-[#F4EEE0] p-8 sm:p-10"
+                        className="absolute bottom-0 left-0 w-[92%] sm:w-[88%] max-w-xl bg-[#F4EEE0] p-6 sm:p-8 lg:p-10"
                         style={{
                             borderTopLeftRadius: 0,
                             borderTopRightRadius: 28,
@@ -335,7 +335,7 @@ export default function Hero() {
 
                         <h1
                             ref={headlineRef}
-                            className="font-display text-[42px] leading-[1.05] text-[#1B1712] sm:text-[54px]"
+                            className="font-display text-[36px] leading-[1.05] text-[#1B1712] sm:text-[42px] lg:text-[54px]"
                         >
                             Fire finds its own rhythm, and dinner follows it.
                         </h1>

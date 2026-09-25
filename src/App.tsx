@@ -5,6 +5,8 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import About from "./components/About";
 import GalleryLightbox from "./components/GalleryLightbox";
 import ReservationSection from "./components/ReservationSection";
+import LocationSection from "./components/LocationSection";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
       <About />
       <GalleryLightbox />
       <ReservationSection />
+      <LocationSection />
+      <Footer />
     </>
   );
 };
