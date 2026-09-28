@@ -102,15 +102,12 @@ const CHEVRON_PATH =
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
-    const [progress, setProgress] = useState(0);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
             setScrolled(window.scrollY > 48);
-            const max = document.documentElement.scrollHeight - window.innerHeight;
-            setProgress(max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0);
         };
         onScroll();
         window.addEventListener("scroll", onScroll, { passive: true });

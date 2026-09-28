@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { type FormEvent } from "react";
+// import { type FormEvent } from "react";
 
 /**
  * EMBER — Footer

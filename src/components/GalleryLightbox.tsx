@@ -274,7 +274,7 @@ export interface LightboxProps {
 
 export function Lightbox({ images, openIndex, onClose, onNavigate }: LightboxProps) {
     const [showControls, setShowControls] = useState(true);
-    const inactivityTimerRef = useRef<NodeJS.Timeout | null>(null);
+    const inactivityTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
     const isOpen = openIndex !== null;
