@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
 // ============================================================================
@@ -16,7 +16,7 @@ interface HourEntry {
  * Array order: Mon=0, Tue=1, Wed=2, Thu=3, Fri=4, Sat=5, Sun=6
  */
 const HOURS: HourEntry[] = [
-    { day: "Mon", open: null,    close: null  },
+    { day: "Mon", open: null, close: null },
     { day: "Tue", open: "17:00", close: "22:00" },
     { day: "Wed", open: "17:00", close: "22:00" },
     { day: "Thu", open: "17:00", close: "22:00" },
@@ -55,7 +55,7 @@ function getOpenStatus(now: Date): StatusInfo {
     if (today.open && today.close) {
         const [oh, om] = today.open.split(":").map(Number);
         const [ch, cm] = today.close.split(":").map(Number);
-        const openMin  = oh * 60 + om;
+        const openMin = oh * 60 + om;
         const closeMin = ch * 60 + cm;
 
         if (cur >= openMin && cur < closeMin) {
@@ -63,8 +63,8 @@ function getOpenStatus(now: Date): StatusInfo {
             if (minsLeft <= 60) {
                 // Last seating 30 min before close
                 const lsMin = closeMin - 30;
-                const lsH   = Math.floor(lsMin / 60);
-                const lsM   = lsMin % 60;
+                const lsH = Math.floor(lsMin / 60);
+                const lsM = lsMin % 60;
                 return {
                     isOpen: true,
                     message: `Open — last seating at ${formatTime(`${lsH}:${lsM.toString().padStart(2, "0")}`)}`,
@@ -90,10 +90,10 @@ function getOpenStatus(now: Date): StatusInfo {
 }
 
 interface HoursRow {
-    dayLabel:   string;
+    dayLabel: string;
     hoursLabel: string;
-    isToday:    boolean;
-    isClosed:   boolean;
+    isToday: boolean;
+    isClosed: boolean;
 }
 
 function buildHoursRows(todayIdx: number): HoursRow[] {
@@ -101,10 +101,10 @@ function buildHoursRows(todayIdx: number): HoursRow[] {
     let i = 0;
     while (i < HOURS.length) {
         const start = i;
-        const ref   = HOURS[i];
+        const ref = HOURS[i];
         while (
             i + 1 < HOURS.length &&
-            HOURS[i + 1].open  === ref.open &&
+            HOURS[i + 1].open === ref.open &&
             HOURS[i + 1].close === ref.close
         ) i++;
         const end = i;
@@ -118,7 +118,7 @@ function buildHoursRows(todayIdx: number): HoursRow[] {
                 ref.open && ref.close
                     ? `${formatTime(ref.open)} – ${formatTime(ref.close)}`
                     : "Closed",
-            isToday:  todayIdx >= start && todayIdx <= end,
+            isToday: todayIdx >= start && todayIdx <= end,
             isClosed: !ref.open,
         });
         i++;
@@ -162,29 +162,29 @@ function MapPlaceholder() {
 
             {/* ── City block fills (slightly darker than land) ── */}
             {/* Row 1 */}
-            <rect x="0"   y="0"   width="148" height="118" fill="#E6DCC6" rx="2" />
-            <rect x="158" y="0"   width="108" height="118" fill="#E6DCC6" rx="2" />
-            <rect x="276" y="0"   width="108" height="118" fill="#E6DCC6" rx="2" />
-            <rect x="424" y="0"   width="108" height="118" fill="#E6DCC6" rx="2" />
-            <rect x="542" y="0"   width="108" height="118" fill="#E6DCC6" rx="2" />
-            <rect x="660" y="0"   width="140" height="118" fill="#E6DCC6" rx="2" />
+            <rect x="0" y="0" width="148" height="118" fill="#E6DCC6" rx="2" />
+            <rect x="158" y="0" width="108" height="118" fill="#E6DCC6" rx="2" />
+            <rect x="276" y="0" width="108" height="118" fill="#E6DCC6" rx="2" />
+            <rect x="424" y="0" width="108" height="118" fill="#E6DCC6" rx="2" />
+            <rect x="542" y="0" width="108" height="118" fill="#E6DCC6" rx="2" />
+            <rect x="660" y="0" width="140" height="118" fill="#E6DCC6" rx="2" />
 
             {/* Row 2 (between Gertrude and the top minor street) */}
-            <rect x="0"   y="128" width="148" height="118" fill="#E6DCC6" rx="2" />
+            <rect x="0" y="128" width="148" height="118" fill="#E6DCC6" rx="2" />
             <rect x="158" y="128" width="108" height="118" fill="#E6DCC6" rx="2" />
             <rect x="424" y="128" width="108" height="118" fill="#E6DCC6" rx="2" />
             <rect x="542" y="128" width="108" height="118" fill="#E6DCC6" rx="2" />
             <rect x="660" y="128" width="140" height="118" fill="#E6DCC6" rx="2" />
 
             {/* Row 3 (below Gertrude) */}
-            <rect x="0"   y="276" width="148" height="118" fill="#E6DCC6" rx="2" />
+            <rect x="0" y="276" width="148" height="118" fill="#E6DCC6" rx="2" />
             <rect x="158" y="276" width="108" height="118" fill="#E6DCC6" rx="2" />
             <rect x="424" y="276" width="108" height="118" fill="#E6DCC6" rx="2" />
             <rect x="542" y="276" width="108" height="118" fill="#E6DCC6" rx="2" />
             <rect x="660" y="276" width="140" height="118" fill="#E6DCC6" rx="2" />
 
             {/* Row 4 */}
-            <rect x="0"   y="404" width="148" height="156" fill="#E6DCC6" rx="2" />
+            <rect x="0" y="404" width="148" height="156" fill="#E6DCC6" rx="2" />
             <rect x="158" y="404" width="108" height="156" fill="#E6DCC6" rx="2" />
             <rect x="424" y="404" width="108" height="156" fill="#E6DCC6" rx="2" />
             <rect x="542" y="404" width="108" height="156" fill="#E6DCC6" rx="2" />
@@ -193,17 +193,17 @@ function MapPlaceholder() {
             {/* ── Parks ── */}
             {/* Edinburgh Gardens-style — upper area, straddling Smith St */}
             <ellipse cx="276" cy="190" rx="115" ry="70" fill="#8FA891" opacity="0.70" />
-            <ellipse cx="258" cy="175" rx="85"  ry="52" fill="#7A9B7C" opacity="0.35" />
+            <ellipse cx="258" cy="175" rx="85" ry="52" fill="#7A9B7C" opacity="0.35" />
             {/* Tree texture dots */}
             <circle cx="238" cy="172" r="10" fill="#6E9070" opacity="0.35" />
-            <circle cx="268" cy="162" r="8"  fill="#6E9070" opacity="0.30" />
+            <circle cx="268" cy="162" r="8" fill="#6E9070" opacity="0.30" />
             <circle cx="294" cy="178" r="11" fill="#6E9070" opacity="0.28" />
-            <circle cx="255" cy="196" r="9"  fill="#6E9070" opacity="0.32" />
+            <circle cx="255" cy="196" r="9" fill="#6E9070" opacity="0.32" />
 
             {/* Small park — bottom right */}
             <ellipse cx="606" cy="448" rx="70" ry="52" fill="#8FA891" opacity="0.60" />
-            <circle  cx="596" cy="440" r="9"            fill="#6E9070" opacity="0.30" />
-            <circle  cx="618" cy="455" r="7"            fill="#6E9070" opacity="0.28" />
+            <circle cx="596" cy="440" r="9" fill="#6E9070" opacity="0.30" />
+            <circle cx="618" cy="455" r="7" fill="#6E9070" opacity="0.28" />
 
             {/* Tiny green square — top right corner */}
             <rect x="678" y="34" width="52" height="44" rx="5" fill="#8FA891" opacity="0.55" />
@@ -263,9 +263,9 @@ function MapPlaceholder() {
             {/* Drop shadow */}
             <ellipse cx="275" cy="268" rx="22" ry="6" fill="#1B1712" opacity="0.20" />
             {/* White ring */}
-            <circle  cx="275" cy="242" r="25" fill="white" filter="url(#pin-shadow)" />
+            <circle cx="275" cy="242" r="25" fill="white" filter="url(#pin-shadow)" />
             {/* Amber fill */}
-            <circle  cx="275" cy="242" r="20" fill="#D99A4E" />
+            <circle cx="275" cy="242" r="20" fill="#D99A4E" />
             {/* "E" monogram */}
             <text
                 x="275" y="248"
@@ -319,7 +319,7 @@ export default function LocationSection() {
     const [status, setStatus] = useState<StatusInfo>(() => getOpenStatus(new Date()));
 
     const todayHoursIdx = useMemo(() => JS_DAY_TO_HOURS_IDX[new Date().getDay()], []);
-    const hoursRows     = useMemo(() => buildHoursRows(todayHoursIdx), [todayHoursIdx]);
+    const hoursRows = useMemo(() => buildHoursRows(todayHoursIdx), [todayHoursIdx]);
 
     // Re-evaluate status every 60 s so the tab stays accurate
     useEffect(() => {
