@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { type FormEvent } from "react";
 
 /**
  * EMBER — Footer
@@ -59,7 +60,7 @@ export default function Footer() {
     const [submitted, setSubmitted] = useState(false);
     const [submitting, setSubmitting] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!email || submitting) return;
         setSubmitting(true);
